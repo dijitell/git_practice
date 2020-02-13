@@ -26,22 +26,23 @@ if (cat.tail) {
 	
 console.log(cat.talk());
 
-function getColor() {
-	runNow2(value);
-}
 
-function runNow(newColor) {
-	const x = document.getElementById("pogo");
-	x.style.color = newColor;
-	x.style.fontSize = "42px";
-	x.style.textDecoration = "underline";
-}
+
 
 runNow2 = (newColor) => {
 	const x = document.getElementById("pogo");
-	x.style.color = newColor;
 	x.style.fontSize = "100px";
 	x.style.textDecoration = "underline";
+	for (i=0; i<1000; i++) {
+		console.log(i);
+	}
 }
 
 
+function sleep(milliseconds) {
+  const date = Date.now();
+  let currentDate = null;
+  do {
+    currentDate = Date.now();
+  } while (currentDate - date < milliseconds);
+};
